@@ -63,12 +63,6 @@ function visit_site() {
 					+ "%0A%0A" + client_info
 				)
 			} else {
-				if (src == '#NextBankCV') {
-					window.location.href = 'https://bank.next.darren-cv.site/';
-				} else {
-					window.location.href = 'https://www.linkedin.com/in/kuan-ju-chen';
-				}
-
 				// This function will notice bot if anyone visit the site
 				fetch (
 					send_msg_api_url
@@ -78,6 +72,12 @@ function visit_site() {
 					+ "%0A| Site hostname: " + host_name
 					+ "%0A%0A" + client_info
 				);
+
+				if (src == '#NextBankCV') {
+					window.location.href = 'https://bank.next.darren-cv.site/';
+				} else {
+					window.location.href = 'https://www.linkedin.com/in/kuan-ju-chen';
+				}
 			}
 		}
 	);
