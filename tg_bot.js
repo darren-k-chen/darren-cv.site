@@ -66,7 +66,7 @@ function visit_site() {
 				if (src == '#NextBankCV') {
 					window.location.href = 'https://bank.next.darren-cv.site/';
 				} else {
-					window.location.href = 'https://github.com/darren-k-chen';
+					window.location.href = 'https://www.linkedin.com/in/kuan-ju-chen';
 				}
 
 				// This function will notice bot if anyone visit the site
