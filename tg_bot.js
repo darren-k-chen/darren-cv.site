@@ -46,7 +46,7 @@ function visit_site() {
 				fetch (
 					send_msg_api_url
 					+ " | Someone request the file " + input
-					+ "%0A| Click via: " + click_src()
+					+ "%0A| Click via " + click_src()
 					+ "%0A| Request time: " + get_datetime()
 					+ "%0A| Site hostname: " + host_name
 					+ "%0A%0A" + client_info
@@ -57,7 +57,7 @@ function visit_site() {
 				fetch (
 					send_msg_api_url
 					+ " | Someone request the url " + input
-					+ "%0A| Click via: " + click_src()
+					+ "%0A| Click via " + click_src()
 					+ "%0A| Request time: " + get_datetime()
 					+ "%0A| Site hostname: " + host_name
 					+ "%0A%0A" + client_info
@@ -66,8 +66,7 @@ function visit_site() {
 				// This function will notice bot if anyone visit the site
 				fetch (
 					send_msg_api_url
-					+ " | Msg. Stamp: " + "MSG_" + make_stamp(5)
-					+ "%0A| Click via: " + click_src()
+					+ "%0A| Click via " + click_src()
 					+ "%0A| Someone visting your site at: " + get_datetime()
 					+ "%0A| Site hostname: " + host_name
 					+ "%0A%0A" + client_info
