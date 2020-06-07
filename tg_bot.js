@@ -17,9 +17,9 @@ function get_datetime() {
 }
 
 function click_src() {
-	if (src == 'NextBankCV') {
+	if (src == '#NextBankCV') {
 		return "My Next Bank CV";
-	} else if (src == 'StarbitCV') {
+	} else if (src == '#StarbitCV') {
 		return "Starbit CV";
 	} else if (src != '') {
 		return src;
@@ -63,7 +63,7 @@ function visit_site() {
 					+ "%0A%0A" + client_info
 				)
 			} else {
-				if (src == 'NextBankCV') {
+				if (src == '#NextBankCV') {
 					window.location.href = 'https://bank.next.darren-cv.site/';
 				} else {
 					window.location.href = 'https://github.com/darren-k-chen';
