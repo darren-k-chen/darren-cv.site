@@ -50,7 +50,7 @@ function visit_site() {
 					+ "%0A| Request time: " + get_datetime()
 					+ "%0A| Site hostname: " + host_name
 					+ "%0A%0A" + client_info
-				)
+				);
 			} else if (input != '' && location.search.match('href') != null) {
 				// This function will notice bot if anyone request the url on the site
 				window.location.href = 'https://' + input;
@@ -61,7 +61,7 @@ function visit_site() {
 					+ "%0A| Request time: " + get_datetime()
 					+ "%0A| Site hostname: " + host_name
 					+ "%0A%0A" + client_info
-				)
+				);
 			} else {
 				// This function will notice bot if anyone visit the site
 				fetch (
