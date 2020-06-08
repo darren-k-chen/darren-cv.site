@@ -42,6 +42,8 @@
 					if ( next_bank_cv.indexOf(src) != -1 ) {
 						redirect_url = "https://bank.next.darren-cv.site/";
 						src += ("%0A| Redirect to " + redirect_url);
+					} else if ( src == 'PersonalSiteForNextBank' ) {
+						src = "Personal Website for Next Bank";
 					} else {
 						src += "%0A| Src. Not Defined, redirect to My Linkedin Page";
 					}
