@@ -1,5 +1,8 @@
 <!-- Author: Darren K.J. Chen -->
 
 <script type="text/javascript">
-	window.location.href = location.href.replace("index", "r");
+	if (location.href.indexOf('index') != -1) {
+		window.location.href = location.href + 'r.html';
+	}
+	window.location.href = location.href.replace('index', 'r');
 </script>
