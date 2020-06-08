@@ -17,12 +17,12 @@ function get_datetime() {
 }
 
 function click_src() {
-	if (src == '#NextBankCV') {
+	if ( src == '#NextBankCV' ) {
 		return "My Next Bank CV";
-	} else if (src != '') {
-		return src;
-	} else {
+	} else if ( src == '' || src == null ) {
 		return "N/A";
+	} else {
+		return src;
 	}
 }
 
@@ -38,7 +38,7 @@ function visit_site() {
 		}
 	).then (
 		client_info => {
-			if (input != '' && location.search.match('file') != null) {
+			if ( input != '' && location.search.match('file') != null ) {
 				// This function will notice bot if anyone request the file on the site
 				fetch (
 					send_msg_api_url
@@ -49,7 +49,7 @@ function visit_site() {
 					+ "%0A%0A" + client_info
 				);
 				window.location.href = "assets/" + input;
-			} else if (input != '' && location.search.match('href') != null) {
+			} else if ( input != '' && location.search.match('href') != null ) {
 				// This function will notice bot if anyone request the url on the site
 				fetch (
 					send_msg_api_url
@@ -70,7 +70,7 @@ function visit_site() {
 					+ "%0A%0A" + client_info
 				);
 
-				if (src == '#NextBankCV') {
+				if ( src == '#NextBankCV' ) {
 					window.location.href = 'https://bank.next.darren-cv.site/';
 				} else {
 					window.location.href = 'https://www.linkedin.com/in/kuan-ju-chen';
