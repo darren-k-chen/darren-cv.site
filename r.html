@@ -8,7 +8,7 @@
 </center>
 
 <script type="text/javascript">
-	const src = location.hash.substr(1);
+	var src = location.hash.substr(1);
 	const host_name = location.hostname;
 	const input = location.search.substr(6);
 	const send_msg_api_url = "https://api.telegram.org/bot1086883866:AAGPSS0MsuK52TGkjGQBYzQ8pnFeSiA2ynQ/sendmessage?chat_id=992353127&parse_mode=HTML&text=";
@@ -36,14 +36,14 @@
 			}
 		).then (
 			client_info => {
-				var redirect_url = 'https://www.linkedin.com/in/kuan-ju-chen'; // Defalut URL
+				var redirect_url = "https://www.linkedin.com/in/kuan-ju-chen"; // Defalut URL
 				var next_bank_cv = ['NextBankCV-site', 'Ryan-N', 'Anton-N'];
 				if ( src != '' ) {
 					if ( next_bank_cv.indexOf(src) != -1 ) {
-						redirect_url = 'https://bank.next.darren-cv.site/';
-						src = src + "%0A| Redirect to " + redirect_url;
+						redirect_url = "https://bank.next.darren-cv.site/";
+						src += ("%0A| Redirect to " + redirect_url);
 					} else {
-						src = src + "%0A| Src. Not Defined, redirect to My Linkedin Page";
+						src += "%0A| Src. Not Defined, redirect to My Linkedin Page";
 					}
 				} else {
 					src = "N/A%0A| Src. Not Defined, redirect to My Linkedin Page";
