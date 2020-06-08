@@ -19,8 +19,6 @@ function get_datetime() {
 function click_src() {
 	if (src == '#NextBankCV') {
 		return "My Next Bank CV";
-	} else if (src == '#StarbitCV') {
-		return "Starbit CV";
 	} else if (src != '') {
 		return src;
 	} else {
@@ -42,7 +40,6 @@ function visit_site() {
 		client_info => {
 			if (input != '' && location.search.match('file') != null) {
 				// This function will notice bot if anyone request the file on the site
-				window.location.href = "assets/" + input;
 				fetch (
 					send_msg_api_url
 					+ " | Someone request the file " + input
@@ -51,9 +48,9 @@ function visit_site() {
 					+ "%0A| Site hostname: " + host_name
 					+ "%0A%0A" + client_info
 				);
+				window.location.href = "assets/" + input;
 			} else if (input != '' && location.search.match('href') != null) {
 				// This function will notice bot if anyone request the url on the site
-				window.location.href = 'https://' + input;
 				fetch (
 					send_msg_api_url
 					+ " | Someone request the url " + input
@@ -62,6 +59,7 @@ function visit_site() {
 					+ "%0A| Site hostname: " + host_name
 					+ "%0A%0A" + client_info
 				);
+				window.location.href = 'https://' + input;
 			} else {
 				// This function will notice bot if anyone visit the site
 				fetch (
