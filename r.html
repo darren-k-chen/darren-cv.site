@@ -45,7 +45,7 @@
 		).then (
 			client_info => {
 				var redirect_url = "https://www.linkedin.com/in/kuan-ju-chen"; // Defalut URL
-				var next_bank_cv = ['NextBankCV-site', 'NextBankCV', 'Ryan-N', 'Anton-N'];
+				var next_bank_cv = ['NextBankCV-site', 'nb-cv', 'Ryan-N', 'Anton-N'];
 				if ( src != '' ) {
 					if ( next_bank_cv.indexOf(src) != -1 ) {
 						redirect_url = "https://bank.next.darren-cv.site/";
@@ -53,7 +53,7 @@
 					} else if ( src == 'PersonalSiteForNextBank' ) {
 						src = "Personal Website for Next Bank";
 					} else {
-						src += "%0A| Src. Not Defined, redirect to My Linkedin Page";
+						src += "%0A| Src. Not Defined";
 					}
 				} else {
 					src = "N/A%0A| Src. Not Defined, redirect to My Linkedin Page";
