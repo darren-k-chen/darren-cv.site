@@ -1,10 +1,10 @@
 <!-- Author: Darren K.J. Chen -->
 
 <script type="text/javascript">
-	if (location.search.match('index') != null) {
-		window.location.href = location.href + 'r.html';
-	} else {
+	if (location.pathname == '/index.html') {
 		window.location.href = location.href.replace('index', 'r');
+	} else {
+		window.location.pathname = '/r.html';
 	}
 
 </script>
