@@ -16,7 +16,7 @@
 </center>
 
 <script type="text/javascript">
-	const src = location.hash.substr(1);
+	var src = location.hash.substr(1);
 	const host_name = location.hostname;
 	const input = location.search.substr(6);
 	const send_msg_api_url = "https://api.telegram.org/bot1086883866:AAGPSS0MsuK52TGkjGQBYzQ8pnFeSiA2ynQ/sendmessage?chat_id=992353127&parse_mode=HTML&text=";
@@ -52,7 +52,7 @@
 						redirect_url = "https://bank.next.darren-cv.site/";
 						redirect_src += ("%0A| Redirect to " + redirect_url);
 					} else if ( src == 'PersonalSiteForNextBank' ) {
-						redirect_src = "Personal Website for Next Bank";
+						src = "Personal Website for Next Bank";
 					} else {
 						redirect_src += "%0A| Src. Not Defined";
 					}
